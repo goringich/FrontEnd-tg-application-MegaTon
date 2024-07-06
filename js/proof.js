@@ -12,13 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
         hash: '0e8724*******2ccfa1ccb',
         user_account: 'https://example.com/user1',
         user_trans: 'https://example.com/trans1',
+        ton: 33
       },
       {
         img: '../images/user2.jpg',
         username: 'User2',
         hash: '0e8724*******2ccfa1ccb',
         user_account: 'https://example.com/user2',
-        user_trans: 'https://example.com/trans2'
+        user_trans: 'https://example.com/trans2',
+        ton: 23
       }
       // Add more transactions as needed
     ];
@@ -33,14 +35,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const transactionElement = document.createElement('div');
         transactionElement.className = 'transaction';
         transactionElement.innerHTML = `
-            <img src="${transaction.img}" alt="${transaction.username}">
-            <div class="transaction-info">
-            <p class="transaction-username"><strong>${transaction.username}</strong></p>
-            <button class="check-button" onclick="window.open('${transaction.user_trans}')">check transaction</button>
+            <div class='transaction_left'>
+                <img src="${transaction.img}" alt="${transaction.username}">
+                <div class="transaction-info">
+                    <p class="transaction-username"><strong>${transaction.username}</strong> (+${transaction.ton}<img src="../images/toncoin.png">)</p>
+                    <button class="check-button" onclick="window.open('${transaction.user_trans}')">check transaction</button>
+                </div>
             </div>
-            <div class="transaction-buttons">
-            <button class="mission-button check_user" onclick="window.open('${transaction.user_account}')">check user</button>
-            
+            <div class='transaction_right'>
+                <div class="transaction-buttons">
+                    <button class="mission-button check_user" onclick="window.open('${transaction.user_account}')">check user</button>
+                </div>
             </div>
         `;
         transactionsContainer.appendChild(transactionElement);

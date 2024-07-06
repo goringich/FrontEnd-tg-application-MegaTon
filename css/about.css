@@ -75,16 +75,21 @@ main{
 
 
 
-
+@media (max-width: 400px) {
+  .tooltip{
+    margin-right: 3px !important;
+  }
+}
 
 
 
 
 .social-media-icons {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-top: 20px;
+  padding: 0 20%;
 }
 
 .social-media-icons .tooltip {
@@ -100,16 +105,22 @@ main{
   transition: color 0.3s;
 }
 
-.social-media-icons a:hover {
+.social-media-icons img:hover {
   color: #0056b3;
 }
 
-.tooltip a{
+.social-icon{
+  transform: scale(1);
   transition: transform .2s linear;
 }
 
-.tooltip a:hover{
-  transform: scale(1.07);
+.social-icon:hover{
+  transform: scale(1.1);
+}
+
+.tooltip a img{
+  display: block;
+  width: 50px;
 }
 
 .tooltiptext {

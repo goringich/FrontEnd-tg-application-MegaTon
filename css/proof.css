@@ -12,3 +12,60 @@ main {
     padding: 20px;
     text-align: center;
 }
+
+
+/* Add these styles to your existing CSS file or create a new one */
+
+.transaction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .transaction:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-5px);
+  }
+  
+  .transaction img {
+    width: 40px;
+    margin-right: 10px;
+  }
+  
+  .transaction-info {
+    flex-grow: 1;
+  }
+  
+  .transaction-username {
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .transaction-hash {
+    margin: 0;
+  }
+  
+  /* Media query for screens less than 550px */
+  @media (max-width: 550px) {
+    .container2 {
+      font-size: 13px !important;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  
+    .transaction img {
+      width: 30px;
+      margin-right: 10px;
+    }
+  
+    .transaction-info {
+      margin-right: 10px;
+    }
+  }
+  

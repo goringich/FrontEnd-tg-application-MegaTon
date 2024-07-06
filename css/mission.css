@@ -54,6 +54,10 @@
   transition: background-color 0.3s, transform 0.3s;
 }
 
+.task img{
+  border-radius: 50%;
+}
+
 .task:hover {
   background-color: #f0f0f0;
   transform: translateY(-5px);
@@ -74,13 +78,147 @@
 }
 
 .task i {
-  font-size: 20px;
+  font-size: 25px;
+  color: rgb(0, 245, 0);
+}
+
+.task .fa-times-circle{
   color: #ff0000;
 }
 
-.task i fa-times-circle{
-  color: rgb(0, 245, 0);
+
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid #3498db;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
 }
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.message {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+
+.message.show {
+  display: block;
+}
+
+.mission-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 12px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+  touch-action: manipulation;
+  outline: none;
+}
+
+.mission-button:hover {
+  background-color: #0056b3;
+}
+
+.check-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 12px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.check-button.green {
+  background-color: #28a745 !important;
+}
+
+.check-button:hover {
+  background-color: #5a6268 !important;
+}
+
+.check-button.green:hover {
+  background-color: #218838 !important;
+}
+
+/* Media query for screens less than 550px */
+@media (max-width: 550px) {
+  .container2 {
+    font-size: 13px !important;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .task {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .task-title{
+    max-width: 185px;
+  }
+
+  .task img {
+    width: 44px;
+    margin-right: 10px;
+  }
+
+  .task-info {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .mission-button,
+  .check-button {
+    width: auto;
+    padding: 12px 12px;
+    margin-left: 4px;
+    zoom: 0.85;
+  }
+
+  .task i {
+    color: #dc3545;
+    transition: color 0.3s;
+    cursor: pointer;
+    align-self: center;
+    margin-left: 3px;
+  }
+}
+
+
+
+
+
+
+
 
 .footer {
   display: flex;
@@ -132,3 +270,5 @@
   background-color: #cccccc;
   cursor: not-allowed;
 }
+
+

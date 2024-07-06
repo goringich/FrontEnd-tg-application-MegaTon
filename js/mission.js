@@ -5,21 +5,33 @@ document.addEventListener('DOMContentLoaded', function() {
   const paginationContainer = document.getElementById('pagination');
 
   // Example tasks data
-  const tasks = Array.from({ length: 25 }, (_, i) => ({
-    title: `Task ${i + 1}`,
-    reward: `${(i + 1) * .1}`,
-    img: "../images/toncoin.png",
-    name: "telegram"
-  }));
-
+  const tasks = [
+    {
+      img: 'https://cdn-icons-png.flaticon.com/512/906/906377.png',
+      name: 'Telegram Icon',
+      title: 'Join Game - Farm to Earn $AVAX $SUPER',
+      reward: 100,
+      link: 'https://example.com/mission1'
+    },
+    {
+      img: 'https://cdn-icons-png.flaticon.com/512/906/906377.png',
+      name: 'Telegram Icon',
+      title: 'Join Chat Group',
+      reward: 500,
+      link: 'https://example.com/mission2'
+    }
+  ];
+  
   function renderTasks() {
     tasksContainer.innerHTML = '';
     const start = (currentPage - 1) * tasksPerPage;
     const end = start + tasksPerPage;
     const tasksToDisplay = tasks.slice(start, end);
-
+    let i = 0;
+  
     tasksToDisplay.forEach(task => {
       const taskElement = document.createElement('div');
+      i++;
       taskElement.className = 'task';
       taskElement.innerHTML = `
         <img src="${task.img}" alt="${task.name}">
@@ -27,13 +39,31 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="task-title"><strong>${task.title}</strong></p>
           <p class="task-reward">+ ${task.reward} <img style="width: 25px; transform: translateY(7px)" src="../images/toncoin.png"/></p>
         </div>
+        <button class="mission-button">Go mission</button>
+        <button class="check-button">Check</button>
         <i class="fas fa-times-circle"></i>
+        <div id="message${i}" class="message">Задание выполнено</div>
       `;
-      taskElement.onclick = function() {
-        toggleTask(taskElement);
+      taskElement.querySelector('.mission-button').onclick = function() {
+        window.open(task.link, '_blank');
+      };
+      taskElement.querySelector('.check-button').onclick = function() {
+        taskElement.classList.add('completed')
+        if (taskElement.classList.contains('completed')) {
+          showMessage('Задание выполнено', i);
+        }
       };
       tasksContainer.appendChild(taskElement);
     });
+  }
+  
+  function showMessage(message, id) {
+    const messageElement = document.getElementById(`message${id}`);
+    messageElement.textContent = message;
+    messageElement.classList.add('show');
+    setTimeout(() => {
+      messageElement.classList.remove('show');
+    }, 2000);
   }
 
   function renderPagination() {
@@ -77,18 +107,37 @@ document.addEventListener('DOMContentLoaded', function() {
     paginationContainer.appendChild(nextButton);
   }
 
-  function toggleTask(element) {
-    if (element.classList.contains('completed')) {
-      element.classList.remove('completed');
-      element.querySelector('i').classList.remove('fa-check-circle');
-      element.querySelector('i').classList.add('fa-times-circle');
-    } else {
-      element.classList.add('completed');
-      element.querySelector('i').classList.remove('fa-times-circle');
-      element.querySelector('i').classList.add('fa-check-circle');
-    }
-  }
 
   renderTasks();
+
+
+  function toggleTask(element, id) {
+    if (element.classList.contains('completed')) {
+      // showMessage('Задание выполнено', id);
+      let checkButton = element.querySelector('.check-button')
+      let missionButton = element.querySelector('.mission-button')
+
+      const icon = element.querySelector('i');
+      icon.classList.remove('fa-times-circle');
+      icon.classList.add('loader');
+      
+      setTimeout(() => {
+        icon.classList.remove('loader');
+        icon.classList.add('fa-check-circle');
+        icon.style.color = "#218838";
+        element.classList.add('completed');
+        checkButton.classList.add('green');
+        missionButton.style.display = "none";
+      }, 3000);
+    }
+  }
+  const tasks1 = document.querySelectorAll('.task');
+  let i2 =0;
+  tasks1.forEach(task => {
+    i2++;
+    task.addEventListener('click', function() {
+      toggleTask(task, i2);
+    });
+  });
   renderPagination();
 });

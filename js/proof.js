@@ -7,14 +7,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Example transactions data
     const transactions = [
       {
-        img: 'https://cdn-icons-png.flaticon.com/512/906/906377.png',
+        img: '../images/user2.jpg',
         username: 'User1',
-        hash: 'https://example.com/transaction1'
+        hash: '0e8724*******2ccfa1ccb',
+        user_account: 'https://example.com/user1',
+        user_trans: 'https://example.com/trans1',
       },
       {
-        img: 'https://cdn-icons-png.flaticon.com/512/906/906377.png',
+        img: '../images/user2.jpg',
         username: 'User2',
-        hash: 'https://example.com/transaction2'
+        hash: '0e8724*******2ccfa1ccb',
+        user_account: 'https://example.com/user2',
+        user_trans: 'https://example.com/trans2'
       }
       // Add more transactions as needed
     ];
@@ -29,15 +33,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const transactionElement = document.createElement('div');
         transactionElement.className = 'transaction';
         transactionElement.innerHTML = `
-          <img src="${transaction.img}" alt="${transaction.username}">
-          <div class="transaction-info">
+            <img src="${transaction.img}" alt="${transaction.username}">
+            <div class="transaction-info">
             <p class="transaction-username"><strong>${transaction.username}</strong></p>
-            <p class="transaction-hash"><a href="${transaction.hash}" target="_blank">View Transaction</a></p>
-          </div>
+            <button class="check-button" onclick="window.open('${transaction.user_trans}')">check transaction</button>
+            </div>
+            <div class="transaction-buttons">
+            <button class="mission-button check_user" onclick="window.open('${transaction.user_account}')">check user</button>
+            
+            </div>
         `;
         transactionsContainer.appendChild(transactionElement);
       });
     }
+
+    
   
     function renderPagination() {
       paginationContainer.innerHTML = '';

@@ -40,11 +40,13 @@
 }
 
 .tasks {
+  justify-content: space-between;
   margin-bottom: 30px;
 }
 
 .task {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   background-color: #f9f9f9;
   padding: 10px;
@@ -55,6 +57,9 @@
 }
 
 .task img{
+  width: 100%;
+  height: auto !important;
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -142,7 +147,7 @@
   color: white;
   border: none;
   border-radius: 5px;
-  padding: 7px 12px;
+  padding: 3px 12px;
   margin-right: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -160,6 +165,47 @@
   background-color: #218838 !important;
 }
 
+.task_right{
+  margin-left: 30px;
+  display: flex;
+  text-align: right;
+}
+
+.task-reward{
+  display: flex;
+  align-items: center;
+}
+
+.task-reward b{
+  margin-right: 5px;
+}
+
+
+.task_left{
+  display: flex;
+}
+
+.task_left img{
+  height: 40px !important;
+  width: 40px !important;
+}
+
+@media (max-width: 700px) {
+  .task-info{
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 650px) {
+  .container2, .mission-button, .check-button {
+    font-size: 13px !important;
+  }
+}
+
+.buttons{
+  display: flex;
+}
+
 /* Media query for screens less than 550px */
 @media (max-width: 550px) {
   .container2 {
@@ -170,6 +216,7 @@
   }
 
   .task {
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
     text-align: left;
@@ -186,13 +233,16 @@
 
   .task-info {
     flex-grow: 1;
-    margin-right: 10px;
+    /* margin-left: -35px !important; */
+    max-width: 130px;
   }
 
   .buttons {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    max-width: 200px;
+    /* display: flex; */
+    display: block;
+    /* justify-content: flex-end; */
+    text-align: right;
     flex-grow: 1;
   }
 
@@ -200,8 +250,9 @@
   .check-button {
     width: auto;
     padding: 12px 12px;
-    margin-left: 4px;
+    margin-left: 3px;
     zoom: 0.85;
+    margin-bottom: 3px;
   }
 
   .task i {
@@ -213,10 +264,31 @@
   }
 }
 
+@media (max-width: 480px) {
 
+  .header img{
+    width: 200px !important;
+  }
+  .task-info{
+    max-width: 110px;
+  }
+}
 
+@media (max-width: 458px) {
+  .task-info{
+    max-width: 100px;
+  }
+}
 
+@media (max-width: 403px) {
+  .task-info{
+    max-width: 150px;
+  }
 
+  .task-reward img{
+    margin-right: 0 !important;
+  }
+}
 
 
 

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     {
       img: 'https://cdn-icons-png.flaticon.com/512/906/906377.png',
       name: 'Telegram Icon',
-      title: 'Join Game - Farm to Earn $AVAX $SUPER',
+      title: 'Join Game - Farm to Earn',
       reward: 100,
       link: 'https://example.com/mission1'
     },
@@ -34,15 +34,23 @@ document.addEventListener('DOMContentLoaded', function() {
       i++;
       taskElement.className = 'task';
       taskElement.innerHTML = `
-        <img src="${task.img}" alt="${task.name}">
-        <div class="task-info">
-          <p class="task-title"><strong>${task.title}</strong></p>
-          <p class="task-reward">+ ${task.reward} <img style="width: 25px; transform: translateY(7px)" src="../images/toncoin.png"/></p>
+        <div class='task_left'>
+          <img src="${task.img}" alt="${task.name}">
+          <div class="task-info">
+            <p class="task-title"><strong>${task.title}</strong></p>
+            <p class="task-reward"><b>+ ${task.reward} </b><img style="width: 25px !important; height: 25px !important;" src="../images/toncoin.png"/></p>
+          </div>
         </div>
-        <button class="mission-button">Go mission</button>
-        <button class="check-button">Check</button>
-        <i class="fas fa-times-circle"></i>
-        <div id="message${i}" class="message">Задание выполнено</div>
+        <div class='task_right'>
+          <div class='buttons'>
+            <button class="mission-button">Go mission</button>
+            <button class="check-button">Check</button>
+          </div>
+          
+          <i class="fas fa-times-circle"></i>
+          <div id="message${i}" class="message">Задание выполнено</div>
+        </div>
+        
       `;
       taskElement.querySelector('.mission-button').onclick = function() {
         window.open(task.link, '_blank');

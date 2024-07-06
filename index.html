@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Ton Miner</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/withdraw.css">
+    <link rel="stylesheet" href="css/more.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <span>Отмена</span>
+            </div>
+            <div class="header-title">
+                <img src="images/logo.png" alt="Logo" class="header-logo">
+                <div class="header-text">
+                    <span>MEGA TON</span>
+                    <span>MINER</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <span class="dot-menu">•••</span>
+            </div>
+        </header>
+        <main>
+            <div class="balance-container">
+                <div class="ton-balance-info">
+                    <img src="images/toncoin2.png" alt="TON Icon" class="ton-icon2">
+                    <span class="ton-balance">9.8974 TON</span>
+                </div>
+                <button class="withdraw-btn">Withdraw</button>
+            </div>
+            <div class="miner-image-container">
+			    <img src="images/microtontree.png" alt="Micro TON Tree" class="microton-tree">
+                <img src="images/turbino-large.gif" alt="Miner Image" class="miner-image">
+            </div>
+            <div class="hashrate-container">
+                <div class="ton-value">
+                    <span id="tonValue">0.000060756</span> TON
+                    <img src="images/toncoin.png" alt="TON Icon" class="ton-icon">
+                </div>
+                <span class="hashrate">Hashrate: 1 GH/s ⚡</span>
+                <div class="space"></div> <!-- Пространство между хэшрейтом и прогресс-баром -->
+                <div class="fluid-progress-container">
+                    <progress id="fluidProgress" value="30" max="100"></progress>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="claim-btn">CLAIM TON</button>
+                <button class="upgrade-btn" id="upgrade-btn">UPGRADE MINER</button>
+            </div>
+        </main>
+		
+		
+		
+<nav class="navigation">
+    <div class="nav-item home active">
+        <img src="images/home.png" alt="Home">
+        <span>Home</span>
+    </div>
+    <div class="nav-item invite">
+        <img src="images/invite.png" alt="Invite">
+        <span>Invite</span>
+    </div>
+    <div class="nav-item more" id="more-btn">
+        <img src="images/more.png" alt="More">
+        <span>More</span>
+    </div>
+    <div class="nav-item wallet">
+        <img src="images/wallet.png" alt="Wallet">
+        <span>Wallet</span>
+    </div>
+</nav>
+
+<div class="hidden-buttons-container" id="hidden-buttons">
+    <div class="arrow" id="left-arrow">
+        <i class="fas fa-chevron-left"></i>
+    </div>
+    <div class="hidden-button-wrapper">
+        <div class="hidden-button-container" id="hidden-button-container">
+            <a href="pages/about.html" class="hidden-button">
+                <img src="images/about.png" alt="About Us">
+                <span>About</span>
+            </a>
+            <a href="pages/mission.html"  class="hidden-button">
+                <img src="images/mission.png" alt="Mission">
+                <span>Mission</span>
+            </a>
+            <a href="pages/proof.html"  class="hidden-button">
+                <img src="images/proof.png" alt="Proof">
+                <span>Proof</span>
+            </a>
+            <a href="pages/roadmap.html"  class="hidden-button">
+                <img src="images/roadmap.png" alt="Roadmap">
+                <span>Roadmap</span>
+            </a>
+             <a href="pages/faq.html" class="hidden-button">
+                <img src="images/faq.png" alt="FAQ">
+                <span>FAQ</span>
+            </a>
+             <a href="pages/games.html"  class="hidden-button">
+                <img src="images/games.png" alt="Games">
+                <span>Games</span>
+            </a>
+        </div>
+    </div>
+    <div class="arrow" id="right-arrow">
+        <i class="fas fa-chevron-right"></i>
+    </div>
+</div>
+
+
+
+
+
+
+
+	
+	
+
+<!-- Добавьте этот код перед закрывающим тегом </body> -->
+<div id="popup-shadow" class="popup-shadow"></div>
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <div class="popup-inner-content">
+            <div class="popup-header">
+                <img src="images/logo.png" alt="Logo" class="header-logo">
+                <div class="header-text">
+                    <span>Mining</span>
+                    <span>Booster</span>
+                </div>
+            </div>
+            <p>Here you can rent mining power for 30 days. The investment profitability is <span style="color: #4c8bf5;">4.87%</span> per day and <span style="color: #4c8bf5;">146%</span> for 30 days.</p>
+            <div class="booster-options">
+                <div class="booster-option" id="option1">
+                    <img src="images/turbino-mini.png" alt="Option 1">
+                    <p>10 GH/s</p>
+                </div>
+                <div class="booster-option" id="option2">
+                    <img src="images/turbino-medium.png" alt="Option 2">
+                    <p>100 GH/s</p>
+                </div>
+                <div class="booster-option" id="option3">
+                    <img src="images/turbino-large.png" alt="Option 3">
+                    <p>1,000 GH/s</p>
+                </div>
+            </div>
+            <div class="booster-details" id="booster-details">
+                <p>Minting Power ⚡<span id="minting-power">100 GH/s</span></p>
+                <p>Rent Period ⚡<span id="rent-period">30 days</span></p>
+                <p>Rent Price ⚡<span id="rent-price">14.2 TON</span></p>
+                <p>30 Days Profit 🔥 <span id="profit-30days">20.736 TON</span></p>
+                <p>Daily 🔥 <span id="daily-profit">0.6912 TON</span></p>
+            </div>
+            <button class="connect-wallet-btn">CONNECT WALLET</button>
+            <button class="close-btn" id="secondary-close-popup">Close</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <div id="withdraw-popup" class="withdraw-popup">
+            <div class="withdraw-popup-content">
+                <div class="popup-inner-content">
+                    <h2>
+                        <img src="images/withdraw.png" alt="Withdraw Icon" class="withdraw-icon">
+                        Withdraw TON
+                    </h2>
+                    <div class="withdraw-info">
+                        <p>Enter your personal TON address</p>
+                        <p>Amount will be sent to TON wallet.</p>
+                        <p>Minimum send amount: <span class="ton-icon"></span> 0.4 TON</p>
+                    </div>
+                    <input type="text" class="ton-wallet-address" placeholder="Your personal TON wallet address">
+                    <input type="number" class="withdraw-amount" placeholder="0">
+                    <p>Network fee: 0.01 TON</p>
+                    <div class="withdraw-buttons">
+                        <button class="send-btn">SEND</button>
+                        <button class="close-btr">Close</button>
+                 </div>
+             </div>
+         </div>
+     </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+<script src="js/button.js"></script>
+<script src="js/secund.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/popup.js"></script>
+<script src="js/withdraw.js"></script>
+<script src="js/more.js"></script>
+</body>
+</html>

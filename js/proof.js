@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const transactionsContainer = document.getElementById('transactions');
     const paginationContainer = document.getElementById('pagination');
   
-    // Example transactions data
     const transactions = [
       {
         img: '../images/user2.jpg',
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
         user_trans: 'https://example.com/trans2',
         ton: 23
       }
-      // Add more transactions as needed
     ];
   
     function renderTransactions() {
@@ -44,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class='transaction_right'>
                 <div class="transaction-buttons">
-                    <button class="mission-button check_user" onclick="window.open('${transaction.user_account}')">check user</button>
+                    <button class="mission-button check_user withdraw-btn" onclick="window.open('${transaction.user_account}')">check user</button>
                 </div>
             </div>
         `;
@@ -104,29 +102,3 @@ document.addEventListener('DOMContentLoaded', function() {
   function navigateTo(page) {
     window.location.href = page;
   }
-  
-  document.addEventListener("DOMContentLoaded", function() {
-    const moreBtn = document.getElementById("more-btn");
-    const hiddenButtonsContainer = document.getElementById("hidden-buttons");
-  
-    moreBtn.addEventListener("click", function() {
-      hiddenButtonsContainer.classList.toggle("show");
-    });
-  
-    document.getElementById("left-arrow").addEventListener("click", function() {
-      scrollHiddenButtons(-1);
-    });
-  
-    document.getElementById("right-arrow").addEventListener("click", function() {
-      scrollHiddenButtons(1);
-    });
-  
-    function scrollHiddenButtons(direction) {
-      const container = document.getElementById("hidden-button-container");
-      container.scrollBy({
-        left: direction * 100,
-        behavior: 'smooth'
-      });
-    }
-  });
-  

@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const tasksContainer = document.getElementById('tasks');
   const paginationContainer = document.getElementById('pagination');
 
-  // Example tasks data
   const tasks = [
     {
       img: 'https://cdn-icons-png.flaticon.com/512/906/906377.png',

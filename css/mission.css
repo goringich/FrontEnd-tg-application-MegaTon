@@ -208,6 +208,11 @@
 
 /* Media query for screens less than 550px */
 @media (max-width: 550px) {
+
+  .pagination{
+    transform: scale(0.7);
+  }
+
   .container2 {
     font-size: 13px !important;
     width: 100%;

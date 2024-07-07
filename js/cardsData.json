@@ -1,0 +1,86 @@
+[
+  {
+    "times": ["06:00", "08:00", "12:00", "15:00", "18:00"],
+    "locations": ["台北火車站", "高雄火車站", "墾丁"],
+    "mapData": ["map1", "map2", "map3"],
+    "texts": [
+      "Initial planning and requirements gathering.",
+      "Design and prototyping.",
+      "Implementation of core features.",
+      "Testing and bug fixing.",
+      "Deployment and monitoring."
+    ]
+  },
+  {
+    "times": ["06:00", "08:00", "12:00", "15:00", "18:00"],
+    "locations": ["台北火車站", "高雄火車站", "墾丁"],
+    "mapData": ["map1", "map2", "map3"],
+    "texts": [
+      "Conceptualization and brainstorming.",
+      "Wireframing and mockups.",
+      "Coding and development.",
+      "User testing and feedback.",
+      "Final adjustments and release."
+    ]
+  },
+  {
+    "times": ["06:00", "08:00", "12:00", "15:00", "18:00"],
+    "locations": ["台北火車站", "高雄火車站", "墾丁"],
+    "mapData": ["map1", "map2", "map3"],
+    "texts": [
+      "Market research and analysis.",
+      "Strategy development.",
+      "Implementation of strategies.",
+      "Performance tracking.",
+      "Continuous improvement."
+    ]
+  },
+  {
+    "times": ["06:00", "08:00", "12:00", "15:00", "18:00"],
+    "locations": ["台北火車站", "高雄火車站", "墾丁"],
+    "mapData": ["map1", "map2", "map3"],
+    "texts": [
+      "Idea generation.",
+      "Concept validation.",
+      "Prototype development.",
+      "Alpha testing.",
+      "Beta release."
+    ]
+  },
+  {
+    "times": ["06:00", "08:00", "12:00", "15:00", "18:00"],
+    "locations": ["台北火車站", "高雄火車站", "墾丁"],
+    "mapData": ["map1", "map2", "map3"],
+    "texts": [
+      "Client onboarding.",
+      "Requirement analysis.",
+      "Project planning.",
+      "Execution.",
+      "Project closure."
+    ]
+  },
+  {
+    "times": ["06:00", "08:00", "12:00", "15:00", "18:00"],
+    "locations": ["台北火車站", "高雄火車站", "墾丁"],
+    "mapData": ["map1", "map2", "map3"],
+    "texts": [
+      "Research phase.",
+      "Design phase.",
+      "Development phase.",
+      "Testing phase.",
+      "Launch phase."
+    ]
+  },
+  {
+    "times": ["06:00", "08:00", "12:00", "15:00", "18:00"],
+    "locations": ["台北火車站", "高雄火車站", "墾丁"],
+    "mapData": ["map1", "map2", "map3"],
+    "texts": [
+      "Initial discussions.",
+      "Requirement gathering.",
+      "Design and development.",
+      "Quality assurance.",
+      "Project delivery."
+    ]
+  }
+]

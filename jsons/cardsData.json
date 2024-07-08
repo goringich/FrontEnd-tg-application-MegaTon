@@ -1,7 +1,7 @@
 [
   {
     "times": ["06:00", "08:00", "12:00", "15:00", "18:00"],
-    "locations": ["台北火車站", "高雄火車站", "墾丁"],
+    "locations": ["lorem23423", "lorem23", "lorem"],
     "mapData": ["map1", "map2", "map3"],
     "texts": [
       "Initial planning and requirements gathering.",
@@ -12,8 +12,8 @@
     ]
   },
   {
-    "times": ["06:00", "08:00", "12:00", "15:00", "18:00"],
-    "locations": ["台北火車站", "高雄火車站", "墾丁"],
+    "times": ["06:00"],
+    "locations": ["lorem23423", "lorem23", "lorem"],
     "mapData": ["map1", "map2", "map3"],
     "texts": [
       "Conceptualization and brainstorming.",
@@ -25,7 +25,7 @@
   },
   {
     "times": ["06:00", "08:00", "12:00", "15:00", "18:00"],
-    "locations": ["台北火車站", "高雄火車站", "墾丁"],
+    "locations": ["lorem23423", "lorem23", "lorem"],
     "mapData": ["map1", "map2", "map3"],
     "texts": [
       "Market research and analysis.",
@@ -37,7 +37,7 @@
   },
   {
     "times": ["06:00", "08:00", "12:00", "15:00", "18:00"],
-    "locations": ["台北火車站", "高雄火車站", "墾丁"],
+    "locations": ["lorem23423", "lorem23", "lorem"],
     "mapData": ["map1", "map2", "map3"],
     "texts": [
       "Idea generation.",
@@ -49,7 +49,7 @@
   },
   {
     "times": ["06:00", "08:00", "12:00", "15:00", "18:00"],
-    "locations": ["台北火車站", "高雄火車站", "墾丁"],
+    "locations": ["lorem23423", "lorem23", "lorem"],
     "mapData": ["map1", "map2", "map3"],
     "texts": [
       "Client onboarding.",
@@ -61,7 +61,7 @@
   },
   {
     "times": ["06:00", "08:00", "12:00", "15:00", "18:00"],
-    "locations": ["台北火車站", "高雄火車站", "墾丁"],
+    "locations": ["lorem23423", "lorem23", "lorem"],
     "mapData": ["map1", "map2", "map3"],
     "texts": [
       "Research phase.",
@@ -73,7 +73,7 @@
   },
   {
     "times": ["06:00", "08:00", "12:00", "15:00", "18:00"],
-    "locations": ["台北火車站", "高雄火車站", "墾丁"],
+    "locations": ["lorem23423", "lorem23", "lorem"],
     "mapData": ["map1", "map2", "map3"],
     "texts": [
       "Initial discussions.",

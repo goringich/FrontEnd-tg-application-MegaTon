@@ -1,0 +1,102 @@
+[
+  {
+    "name": "User1",
+    "reward": 50,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User2",
+    "reward": 60,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User3",
+    "reward": 70,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User4",
+    "reward": 80,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User5",
+    "reward": 90,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User6",
+    "reward": 100,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User7",
+    "reward": 110,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User8",
+    "reward": 120,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User9",
+    "reward": 130,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User10",
+    "reward": 140,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User11",
+    "reward": 150,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User12",
+    "reward": 160,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User13",
+    "reward": 170,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User14",
+    "reward": 180,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User15",
+    "reward": 190,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User16",
+    "reward": 200,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User17",
+    "reward": 210,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User18",
+    "reward": 220,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User19",
+    "reward": 230,
+    "avatar": "../images/avatar.jpg"
+  },
+  {
+    "name": "User20",
+    "reward": 240,
+    "avatar": "../images/avatar.jpg"
+  }
+]

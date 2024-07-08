@@ -1,0 +1,210 @@
+
+.header {
+  background-color: #007bff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.invite-section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.invite-info p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.invite-link {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.invite-link input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.copy-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.copy-button:hover {
+  background-color: #0056b3;
+}
+
+.invitees {
+  margin-top: 20px;
+}
+
+.invitees h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.invitee-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.invitee-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 100%;
+  justify-content: space-between;
+  transition: transform .1s linear;
+}
+
+.invitee-item:hover{
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.invitee-details {
+  display: flex;
+  align-items: center;
+}
+
+.invitee-details img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.invitee-details p {
+  font-size: 14px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.invitee-reward {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.invite-friend {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.invite-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.invite-button:hover {
+  background-color: #0056b3;
+}
+
+.small-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 1px;
+  transform: translateY(5px);
+}
+
+
+/* .invite__bottom{
+  display: flex;
+} */
+
+.invite-link {
+  display: block ;
+  /* display: flex; */
+  align-items: center;
+  margin-top: 10px;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: scale(.9);
+}
+
+.invite-link p {
+  font-size: 1.5em;
+  margin: 0 10px 5px 0;
+  font-weight: bold;
+  flex: 1;
+}
+
+.invite-link input {
+  flex: 2;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-right: 10px;
+  background-color: white;
+}
+
+.copy-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.copy-button:hover {
+  background-color: #0056b3;
+}

@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transaction Proof</title>
-    <link rel="stylesheet" href="../css/roadmap.css">
     <link rel="stylesheet" href="../css/styles.css"> 
-    <link rel="stylesheet" href="../css/proof.css"> 
+    <link rel="stylesheet" href="../css/invite.css"> 
 	  <link rel="stylesheet" href="../css/more.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -23,6 +22,34 @@
             </div>
         </header>
         <main>
+          <div class="header">
+            <h1>Invite Friends</h1>
+            <p>Invite frens and receive 50 FLOKI and 100 TONEE bonus for every account you invited. You can also receive 1% cashback in TON each time your frens rent a miner booster.</p>
+          </div>
+          <div class="container">
+            <section class="invite-section">
+              <div class="invite-info">
+                <div class="invite-link">
+                  <p>Your Invite Link</p>
+                  <div class="invite__bottom">
+                    <input type="text" value="t.me/tonee_app_bot?..." readonly>
+                    <button class="copy-button">Copy</button>
+                  </div>
+                </div>
+              </div>
+              <div class="invitees">
+                <h2>Your Invitee (28604)</h2>
+                <div class="invitee-list" id="invitee-list"></div>
+                <div class="pagination" id="pagination">
+                  <button class="prev" onclick="prevPage()">Previous</button>
+                  <button class="next" onclick="nextPage()">Next</button>
+                </div>
+              </div>
+              <div class="invite-friend">
+                <button class="invite-button">Invite a friend</button>
+              </div>
+            </section>
+          </div>
         </main>
         <footer>
             <nav class="navigation">
@@ -83,6 +110,6 @@
     <!-- </div> -->
     <script src="../js/button.js"></script>
     <script src="../js/more.js"></script>
-    <script src="../js/roadmap.js"></script>
+    <script src="../js/invite.js"></script>
 </body>
 </html>

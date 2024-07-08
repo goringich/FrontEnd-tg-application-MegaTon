@@ -1,18 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const body = document.body.querySelector(".container2");
+  const body = document.body.querySelector("main");
+  console.log(body);
 
   // Создание контейнера
   const box = document.createElement('div');
   box.className = 'box';
   body.appendChild(box);
 
-  // Создание контейнера для карт
   const cardsContainer = document.createElement('div');
   cardsContainer.className = 'cards is-active';
   box.appendChild(cardsContainer);
 
-  // Загрузка данных из JSON
-  fetch('../js/cardsData.json')
+  fetch('../jsons/cardsData.json')
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -20,16 +19,19 @@ document.addEventListener('DOMContentLoaded', function () {
       return response.json();
     })
     .then(cardsData => {
-      // Функция для создания карт
       function createCard(data, index) {
         const card = document.createElement('div');
         card.className = `card card--${index + 1}`;
-        card.style.transform = `translateY(calc(${index * 15.2857}% - ${index * 0.214286}rem))`;
+        card.style.transform = `translateY(calc(${index * 13.2857}% - ${index * 0.214286}rem))`;
         if (index === 2) card.classList.add('is-active');
 
         const cardTitle = document.createElement('h2');
+        const imgTitle = document.createElement('img');
+        imgTitle.classList.add("img_card")
+        imgTitle.src = "../images/avatar.jpg";
         cardTitle.className = 'card__title';
         cardTitle.textContent = `Card ${index + 1}`;
+        cardTitle.appendChild(imgTitle);
         card.appendChild(cardTitle);
 
         const schedules = document.createElement('dl');
@@ -85,15 +87,6 @@ document.addEventListener('DOMContentLoaded', function () {
           card.wrap.classList.toggle('is-active', !isActive);
         }
       });
-
-      let reCalcPos = () => {
-        let cards = [].slice.call(card.wrap.querySelectorAll('.card'));
-        let count = cards.length;
-
-        cards.forEach((card, i) => {
-          card.style.transform = `translateY(calc(${i / count} * (100% - 1.5rem)))`;
-        });
-      };
     })
     .catch(error => console.error('Error loading data:', error));
 });

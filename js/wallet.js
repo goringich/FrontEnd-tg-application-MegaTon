@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const inviteeList = document.getElementById('invitee-list');
+  const inviteeList = document.getElementById('wallet-list');
   const pagination = document.getElementById('pagination');
   const itemsPerPage = 15;
   let currentPage = 1;
   let users = [];
 
-  fetch('../jsons/invite.json')
+  fetch('../jsons/wallet.json')
     .then(response => response.json())
     .then(data => {
       users = data;
@@ -36,15 +36,26 @@ document.addEventListener('DOMContentLoaded', function() {
       const nameAndBonus = document.createElement('div');
       nameAndBonus.className = 'name-and-bonus';
 
+      const nameBonusWrapper = document.createElement('div');
+      nameBonusWrapper.className = 'name-bonus-wrapper';
+
       const name = document.createElement('p');
+      name.className = 'invitee-name';
       name.textContent = user.name;
 
       const bonus = document.createElement('p');
       bonus.className = 'invitee-bonus';
-      bonus.textContent = user.bonus;
+      bonus.textContent = "(" + user.bonus + ")";
 
-      nameAndBonus.appendChild(name);
-      nameAndBonus.appendChild(bonus);
+      const date = document.createElement('p');
+      date.className = 'invitee-date';
+      date.textContent = user.date;
+
+      nameBonusWrapper.appendChild(name);
+      nameBonusWrapper.appendChild(bonus);
+
+      nameAndBonus.appendChild(nameBonusWrapper);
+      nameAndBonus.appendChild(date);
 
       inviteeDetails.appendChild(avatar);
       inviteeDetails.appendChild(nameAndBonus);
@@ -54,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       const reward = document.createElement('span');
       reward.className = 'invitee-reward';
-      reward.innerHTML = `(+${user.reward}) <img src="../images/toncoin.png" class="small-avatar" alt="avatar">`;
+      reward.innerHTML = `check transaction`;
 
       inviteeActions.appendChild(reward);
 

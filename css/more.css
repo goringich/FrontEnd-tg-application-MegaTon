@@ -119,9 +119,49 @@
 
 .hidden-buttons-container.show {
     transform: translateY(0);
+    transition: transform .1s linear;
 }
 
 .arrow:active {
     transform: translateY(2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+
+
+
+
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+  }
+  .hidden-buttons-container {
+    width: 80%;
+    overflow: hidden;
+  }
+  .hidden-button-container {
+    display: flex;
+  }
+  .hidden-button {
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  #left-arrow, #right-arrow {
+    cursor: pointer;
+    font-size: 24px;
+    user-select: none;
+  }
+
+
+
+

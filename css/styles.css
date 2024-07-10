@@ -567,6 +567,10 @@ progress::-moz-progress-bar {
     }
 }
 
+a:hover{
+    text-decoration: none;
+    color: inherit !important;
+}
 
 
 

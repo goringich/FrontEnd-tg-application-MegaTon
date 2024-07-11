@@ -66,4 +66,52 @@ document.addEventListener('DOMContentLoaded', () => {
 });
   
 
+$(document).ready(function(){
+    $('.hidden-button-container').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      prevArrow: '#left-arrow',
+      nextArrow: '#right-arrow',
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 450,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+
+    const $slider = $('.hidden-button-container');
+    const $prevArrow = $('#left-arrow');
+    const $nextArrow = $('#right-arrow');
+    
+    $slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+        const currentIndex = currentSlide || 0;
+        const totalSlides = slick.slideCount;
+        const slidesToShow = slick.options.slidesToShow;
+    
+        if (currentIndex === 0) {
+          $prevArrow.css('color', 'transparent').css('pointer-events', 'none');
+        } else {
+          $prevArrow.css('color', '#fff').css('pointer-events', '');
+        }
+    
+        if (currentIndex >= totalSlides - slidesToShow) {
+          $nextArrow.css('color', 'transparent').css('pointer-events', 'none');
+        } else {
+          $nextArrow.css('color', '').css('pointer-events', '');
+        }
+    });
+});
+
 

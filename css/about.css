@@ -77,10 +77,32 @@ main{
 
 @media (max-width: 400px) {
   .tooltip{
-    margin-right: 3px !important;
+    margin-right: 10px !important;
+    margin-left: -3px;
   }
 }
 
+@media (max-width: 392px) {
+  .tooltip{
+    margin-right: 10px !important;
+    margin-left: -5px;
+  }
+}
+
+
+@media (max-width: 385px) {
+  .tooltip{
+    margin-right: 10px !important;
+    transform: translateX(-5px);
+  }
+}
+
+@media (max-width: 365px) {
+  .tooltip{
+    margin-right: 10px !important;
+    transform: translateX(-10px);
+  }
+}
 
 
 

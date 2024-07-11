@@ -324,6 +324,7 @@ progress::-moz-progress-bar {
 }
 
 .miner-image-container {
+    z-index: 0;
     position: relative;
     text-align: center;
 }
@@ -350,7 +351,12 @@ progress::-moz-progress-bar {
     }
 }
 
-
+.content img{
+    width: 23px;
+    margin-bottom: -1px !important;
+    padding-right: 3px;
+    /* display: block; */
+}
 
 
 
@@ -575,3 +581,6 @@ a:hover{
 
 
 
+.actions{
+    margin-bottom: 150px;
+}

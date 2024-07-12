@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/withdraw.css">
     <link rel="stylesheet" href="css/more.css">
+	<link rel="stylesheet" href="css/invest.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -101,6 +102,9 @@
                     <a href="pages/games.html"  class="hidden-button">
                         <img src="images/games.png" alt="Games">
                         <span>Games</span>
+                    <a href="pages/disclaimer.html"  class="hidden-button">
+                        <img src="/images/disclaimer.png" alt="Disclaimer">
+                        <span>Disclaimer</span>
                     </a>
                 </div>
             </div>
@@ -111,7 +115,7 @@
 
 
         <!-- Добавьте этот код перед закрывающим тегом </body> -->
-        <div id="popup-shadow" class="popup-shadow"></div>
+        <!-- <div id="popup-shadow" class="popup-shadow"></div> -->
         <div id="popup" class="popup">
             <div class="popup-content">
                 <div class="popup-inner-content">
@@ -122,35 +126,61 @@
                             <span>Booster</span>
                         </div>
                     </div>
-                    <p>Here you can rent mining power for 30 days. The investment profitability is <span style="color: #4c8bf5;">4.87%</span> per day and <span style="color: #4c8bf5;">146%</span> for 30 days.</p>
+                    <p>Here you can rent mining power for 30 days. The investment profitability is <span style="color: #4c8bf5;">4,50%</span> per day and <span style="color: #4c8bf5;">135%</span> for 30 days.</p>
                     <div class="booster-options">
                         <div class="booster-option" id="option1">
                             <img src="images/turbino-mini.png" alt="Option 1">
+                            <img class="megatonik" src="images/microtonone.png" alt="">
                             <p>10 GH/s</p>
                         </div>
                         <div class="booster-option" id="option2">
                             <img src="images/turbino-medium.png" alt="Option 2">
+                            <img class="megatonik" src="images/microtontu.png" alt="">
                             <p>100 GH/s</p>
                         </div>
                         <div class="booster-option" id="option3">
                             <img src="images/turbino-large.png" alt="Option 3">
+                            <img class="megatonik" src="images/microtontree.png" alt="">
                             <p>1,000 GH/s</p>
                         </div>
                     </div>
                     <div class="booster-details" id="booster-details">
                         <p>Minting Power ⚡<span id="minting-power">100 GH/s</span></p>
                         <p>Rent Period ⚡<span id="rent-period">30 days</span></p>
-                        <p>Rent Price ⚡<span id="rent-price">14.2 TON</span></p>
-                        <p>30 Days Profit 🔥 <span id="profit-30days">20.736 TON</span></p>
-                        <p>Daily 🔥 <span id="daily-profit">0.6912 TON</span></p>
+                        <p>Minimum Invest price ⚡<span id="rent-price">5 TON</span></p>
+						<p>Max Invest price ⚡<span id="max-invest-price">693 TON</span></p>
+                        <p>30 Days Profit 🔥 <span id="profit-30days-percentage">130%</span></p>
+                        <p>Daily Profit 🔥 <span id="daily-profit-percentage">4,33%</span></p>
                     </div>
-                    <button class="connect-wallet-btn">CONNECT WALLET</button>
+                    <button class="connect-wallet-btn">Select Miner</button>
                     <button class="close-btn" id="secondary-close-popup">Close</button>
                 </div>
             </div>
         </div>
+		
+		
+		
+		<!-- New Investment Popup -->
+<!-- <div id="invest-popup" class="invest-popup">
+    <div class="invest-popup-content">
+        <div class="popup-inner-content">
+            <div class="popup-header">
+                <img src="images/logo.png" alt="Logo" class="header-logo">
+                <div class="header-text">
+                    <span>Investment</span>
+                    <span>Details</span>
+                </div>
+            </div>
+            <p>Details about the selected miner and investment options.</p>
+        Add more detailed information here as needed 
+            <button class="connect-wallet-btn">Connect Wallet</button>
+            <button class="close-btn">Close</button>
+        </div>
+    </div>
+</div> -->
 
-
+		
+		
         <div id="withdraw-popup" class="withdraw-popup">
             <div class="withdraw-popup-content">
                 <div class="popup-inner-content">
@@ -185,5 +215,7 @@
 <script src="js/popup.js"></script>
 <script src="js/withdraw.js"></script>
 <script src="js/more.js"></script>
+<!-- <script src="js/invest.js"></script> -->
+
 </body>
 </html>

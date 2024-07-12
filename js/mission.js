@@ -8,15 +8,29 @@ document.addEventListener('DOMContentLoaded', function() {
     {
       img: 'https://cdn-icons-png.flaticon.com/512/906/906377.png',
       name: 'Telegram Icon',
-      title: 'Join Game - Farm to Earn',
-      reward: 100,
+      title: 'Join Telegram channel',
+      reward: 0.001,
       link: 'https://example.com/mission1'
     },
     {
       img: 'https://cdn-icons-png.flaticon.com/512/906/906377.png',
       name: 'Telegram Icon',
       title: 'Join Chat Group',
-      reward: 500,
+      reward: 0.001,
+      link: 'https://example.com/mission2'
+    },
+	{
+      img: '/images/jointwitter.png',
+      name: 'Telegram Icon',
+      title: 'Join Twitter',
+      reward: 0.001,
+      link: 'https://example.com/mission1'
+    },
+    {
+      img: '/images/social.png',
+      name: 'Telegram Icon',
+      title: 'Join Instagram',
+      reward: 0.001,
       link: 'https://example.com/mission2'
     }
   ];
@@ -126,7 +140,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
       const icon = element.querySelector('i');
       icon.classList.remove('fa-times-circle');
-      icon.classList.add('loader');
+      if (!icon.classList.contains("fa-check-circle")){
+        icon.classList.add('loader');
+      }
       
       setTimeout(() => {
         icon.classList.remove('loader');

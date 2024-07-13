@@ -181,3 +181,11 @@ input[type="number"] {
 .popup2.show .popup2-content {
   transform: translateY(0);
 }
+
+
+
+@media (max-width: 400px){
+  .popup2-header{
+      transform: scale(1.2) translateY(-25px) !important;
+  }
+}

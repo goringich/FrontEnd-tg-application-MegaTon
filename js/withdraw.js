@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
         withdrawPopup.classList.remove('show');
         withdrawPopup.addEventListener('transitionend', () => {
             if (!withdrawPopup.classList.contains('show')) {
-                withdrawPopup.style.display = 'none';
+                setTimeout(() => withdrawPopup.style.display = 'none', 300);
             }
-        }, { once: true });
+        });
     };
 
     closePopupBtn.addEventListener('click', closePopup);

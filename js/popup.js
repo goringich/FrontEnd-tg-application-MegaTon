@@ -48,19 +48,23 @@ document.addEventListener('DOMContentLoaded', () => {
     let selectedOption = 'option1';
 
     upgradeBtn.addEventListener('click', () => {
-        // popup.style.display = 'flex';
-        requestAnimationFrame(() => {
-            popup.classList.add('show');
-        });
-    });
+        popup.style.display = 'flex';
+        setTimeout(() => {
+          popup.classList.add('show');
+        }, 300);
+      });
 
     const closePopupFunction = () => {
         popup.classList.remove('show');
         popup.addEventListener('transitionend', () => {
             if (!popup.classList.contains('show')) {
-                popup.style.display = 'none';
+                // setTimeout(() => {
+                // popup.style.transform =  "translateY(100%)";
+                
+                // popup.style.display = 'none'
+                // }, 300);
             }
-        }, { once: true });
+        });
     };
 
     secondaryClosePopup.addEventListener('click', closePopupFunction);
@@ -108,53 +112,51 @@ document.addEventListener('DOMContentLoaded', () => {
     boosterOptions[0].querySelector('img').src = initialData.gifImage;
 
     connectWalletBtn.addEventListener('click', () => {
-        popup.style.display = "none";
-        const selectedData = optionsData[selectedOption];
-        const walletPopup = document.createElement('div');
-        walletPopup.className = 'popup2 show';
-        walletPopup.innerHTML = `
-            <div class="popup-content">
-                <style>
-                    
-                    .popup2.show {
-                        display: flex;
-                        opacity: 1;
-                        transform: translate(-50%, -50%) scale(1);
-                    }
-                    .popup-content {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                    }
-                    .popup-header img {
-                        width: 100px;
-                    }
-                    .popup-inner-content p {
-                        margin: 10px 0;
-                    }
-                    .connect-wallet-btn, .close-btn {
-                        margin: 10px;
-                    }
-                </style>
-                <div class="popup-inner-content">
-                    <div class="popup-header">
-                        <img src="${selectedData.gifImage}" alt="Logo" class="header-logo">
-                        <div class="header-text">
-                            <span>${selectedData.power}</span>
-                        </div>
-                    </div>
-                    <p>Minting Power ⚡<span>${selectedData.power}</span></p>
-                    <p>Rent Period ⚡<span>${selectedData.period}</span></p>
-                    <p>Minimum Invest price ⚡<span>${selectedData.price}</span></p>
-                    <p>Max Invest price ⚡<span>${selectedData.maxPrice}</span></p>
-                    <p>30 Days Profit 🔥 <span>${selectedData.profit30Days}</span></p>
-                    <p>Daily 🔥 <span>${selectedData.dailyProfit}</span></p>
-                    <input type="number" placeholder="Write the number of TON">
-                    <button class="connect-wallet-btn">CONNECT WALLET</button>
-                    <button class="close-btn" onclick="this.parentElement.parentElement.parentElement.remove()">Close</button>
+        console.log("hello world");
+        setTimeout(() => {
+          popup.classList.remove('show');
+          const selectedData = optionsData[selectedOption];
+          const walletPopup = document.createElement('div');
+          walletPopup.className = 'popup2';
+          walletPopup.innerHTML = `
+            <div class="popup2-content">
+              <div class="popup2-inner-content">
+                <div class="popup2-header">
+                  <img src="${selectedData.gifImage}" alt="Logo" class="header-logo">
+                  <div class="header-text">
+                    <span>${selectedData.power}</span>
+                  </div>
                 </div>
+                <p><b>Minting Power ⚡</b><span>${selectedData.power}</span></p>
+                <p><b>Rent Period ⚡</b><span>${selectedData.period}</span></p>
+                <p><b>Minimum Invest price ⚡</b><span>${selectedData.price}</span></p>
+                <p><b>Max Invest price ⚡</b><span>${selectedData.maxPrice}</span></p>
+                <p><b>30 Days Profit 🔥</b> <span>${selectedData.profit30Days}</span></p>
+                <p><b>Daily 🔥</b> <span>${selectedData.dailyProfit}</span></p>
+                <div class='frame'>
+                  <input type="number" placeholder="Write the number of TON">
+                  <button class="connect-wallet-btn">CONNECT WALLET</button>
+                  <button class="close-btn">Close</button>
+                </div>
+              </div>
             </div>
-        `;
-        document.body.appendChild(walletPopup);
-    });
+          `;
+      
+          document.body.appendChild(walletPopup);
+          setTimeout(() => {
+            walletPopup.classList.add('show');
+          }, 300);
+      
+          // закрытие - работает, не трогать 
+          walletPopup.querySelector(".close-btn").addEventListener("click", () => {
+            setTimeout(() => {
+              walletPopup.style.transform = "translate(-50%, 150%) scale(1)";
+            }, 300);
+            setTimeout(() => {
+              walletPopup.remove();
+            }, 600);
+          });
+        }, 200);
+      });
+      
 });
